@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import {
@@ -12,7 +14,6 @@ import {
 } from "@mui/material";
 import { useUser } from "@clerk/nextjs";
 import { collection, doc, getDocs } from "firebase/firestore";
-import { db } from "@/lib/firebase"; // Adjust the import path based on your project structure
 
 export default function Flashcard() {
   const { isLoaded, isSignedIn, user } = useUser();
